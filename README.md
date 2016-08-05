@@ -1,1 +1,1 @@
-#ES6 learn
+#ES6 Learn
