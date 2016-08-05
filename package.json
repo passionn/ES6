@@ -1,0 +1,31 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "description": "es6 learn",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yzhangpan/ES6.git"
+  },
+  "keywords": [
+    "es6",
+    "webpack"
+  ],
+  "author": "passion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yzhangpan/ES6/issues"
+  },
+  "homepage": "https://github.com/yzhangpan/ES6#readme",
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
