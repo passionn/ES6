@@ -7,7 +7,7 @@ console.log(NAME);
 console.log('hello github!');
 
 
-console.log(process);
+console.log(process.env);
 
 //模块 中的this；
 
