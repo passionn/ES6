@@ -39,7 +39,7 @@ var { foo: baz } = { foo: 'aaa', bar: 'bbb' };
 baz // "aaa"
 foo // error;
 ```
-其实对象的赋值是虾面形式的简写；
+其实对象的赋值是下面形式的简写；
 ```
 var { foo: foo, bar: bar } = { foo: "aaa", bar: "bbb" };
 ```
