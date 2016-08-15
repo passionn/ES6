@@ -23,3 +23,13 @@ console.log('字符串的赋值');
  let {length:len}={length:15,len:20};
  console.log(len);
  console.log(length);
+
+ console.log('函数的解构赋值');
+
+ function add([x, y]){
+   return x + y;
+ }
+ console.log(add([1, 2]));
+
+var newarr=[[1,2],[3,4]].map(([a,b])=> a+b);
+console.log(newarr);
