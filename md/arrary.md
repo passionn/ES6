@@ -17,3 +17,12 @@ var arr1 = [].slice.call(arrayLike); // ['a', 'b', 'c']
 let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
 
 ```
+
+### Arrary.of()
+用于将一组值，转换为数组
+```
+Arrary.of(3,11,3);//[3,11,2]
+Arrary.of(3).length;//1
+```
+
+
