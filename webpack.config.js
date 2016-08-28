@@ -8,7 +8,7 @@ module.exports = {
 		path: __dirname,
 		filename: "./dist/bundle.js"
 	},
-	devtool: '#inline-source-map',
+	devtool: '#cheap-source-map',
 	module: {
 		loaders: [{
 			test: /\.js|\.jsx$/,
