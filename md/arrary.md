@@ -21,8 +21,8 @@ let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
 ### Arrary.of()
 用于将一组值，转换为数组
 ```
-Arrary.of(3,11,3);//[3,11,2]
-Arrary.of(3).length;//1
+Array.of(3,11,3);//[3,11,2]
+Array.of(3).length;//1
 ```
 ### 数组实例的 find()和 findIndex()
 数组实例的find 方法，用于找出第一个符合跳纤的数组成员，参数：一个回调函数，所有数组成员一次执行该回调函数，知道炸出第一个返回值为true 的成员，然后赶回该成员。如果没有符合跳纤的成员，则返回undefined。
