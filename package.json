@@ -4,7 +4,7 @@
   "description": "es6 learn",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "set NODE_ENV=production&&node server.js --env=age",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

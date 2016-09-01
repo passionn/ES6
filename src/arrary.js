@@ -7,6 +7,7 @@ let arrayLike = {
 let arr2 = Array.from(arrayLike);
 console.log(arr2);
 
+
 let promise = new Promise(function(resolve, reject) {
   console.log('Promise');
   resolve();

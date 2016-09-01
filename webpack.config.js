@@ -8,7 +8,7 @@ module.exports = {
 		path: __dirname,
 		filename: "./dist/bundle.js"
 	},
-	devtool: '#inline-source-map',
+	devtool: 'source-map',
 	module: {
 		loaders: [{
 			test: /\.js|\.jsx$/,
@@ -20,9 +20,9 @@ module.exports = {
 		}]
 	},
 	plugins: [
-		new webpack.SourceMapDevToolPlugin({
+		/*new webpack.SourceMapDevToolPlugin({
 			filename: 'bundle.js.map'
-		}),
+		}),*/
 		new webpack.HotModuleReplacementPlugin()/*,
 		new webpack.DefinePlugin({
 			'process.env':{

@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 console.log('hello! ES6');
 console.log([
 "                                _oo8oo_",
