@@ -55,3 +55,32 @@ var p2 = new Promise(function (resolve, reject) {
 
 ### Promise.prototype.catch()
 Promise.prototype.catch方法是.then(null, rejection)的别名，用于指定发生错误时的回调函数。
+
+### Promise.prototype.all()
+用于将多个promise实力包装成一个promise实例；
+```
+var p=Promise.all([p1,p2,p3]);
+```
+
+### Promise.resolve()
+有时候需要将现有对象转化成promise 对象就需要promise.resolve()
+.参数是一个promise对象；
+.参数是一个thenable 对象
+.参数不具有then方法的对象或者根本不是对象
+.不带有任何参数
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
