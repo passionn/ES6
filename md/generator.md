@@ -4,7 +4,7 @@ Generator函数是一个状态机封装了多个内部状态，执行Generator�
 Generator 的两个特征
 . function 关键字与函数名之间有一个星号
 . 函数体内使用yield语句 定义不同的内部状态；
-｀｀｀
+```
 function* helloWorldGenerator() {
   yield 'hello';
   yield 'world';
@@ -21,6 +21,33 @@ hw.next();
 hw.next();
 //{value:undefined,done:true}
 
-｀｀｀
+```
+
 ### yield 语句
-由于Generator函数返回遍历器对象，只有调用next 方法才会遍历下一个内部状态，所以其实提供了一种可以暂停执行的函数。yield 语句就是暂停标志；
+由于Generator函数返回遍历器对象，只有调用next 方法才会遍历下一个内部状态，所以其实提供了一种可以暂停执行的函数。yield 语句就是暂停标志；  
+> 普通函数中不能使用yield 语句
+
+```
+var arr = [1, [[2, 3], 4], [5, 6]];
+
+var flat = function* (a) {
+  var length = a.length;
+  for (var i = 0; i < length; i++) {
+    var item = a[i];
+    if (typeof item !== 'number') {
+      yield* flat(item);
+    } else {
+      yield item;
+    }
+  }
+};
+
+for (var f of flat(arr)) {
+  console.log(f);
+}
+
+```
+### 与Iterator 接口的关系
+
+### next 方法参数
+yield 
