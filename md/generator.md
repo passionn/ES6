@@ -20,7 +20,7 @@ hw.next();
 //{value:'ending',done:true}
 hw.next();
 //{value:undefined,done:true}
-
+sha
 ```
 
 ### yield 语句
@@ -50,4 +50,19 @@ for (var f of flat(arr)) {
 ### 与Iterator 接口的关系
 
 ### next 方法参数
-yield 
+yield 句本身没有返回值，或者说总是返回undefined。next 方法可以带一个参数，该参数就会被当做上一个yield 语句的返回值。
+```
+function *f(){
+    for(var i=0;true;i++){
+        var rest=yield i;
+        if(rest){i=-1;}
+    }
+}
+
+var g=f();
+
+g.next(); // {value:0,done:false}
+g.next(); // {value:1,done:false}
+g.next(true); //{value:0,done:false}
+
+```
