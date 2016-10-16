@@ -29,3 +29,14 @@ function *vervield(){
 var v1=vervield();
 console.log('变量！');
 console.log(v1.next());
+
+//yield  停止的时机
+var yieldtime= function*(a){
+    var b=2*(yield 3);
+    var c= yield 8;
+    return 5;
+}
+var y1=yieldtime();
+console.log('停止时机！');
+console.log(y1.next());
+console.log(y1.next());

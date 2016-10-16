@@ -20,7 +20,7 @@ hw.next();
 //{value:'ending',done:true}
 hw.next();
 //{value:undefined,done:true}
-sha
+
 ```
 
 ### yield 语句
@@ -66,3 +66,45 @@ g.next(); // {value:1,done:false}
 g.next(true); //{value:0,done:false}
 
 ```
+
+### for of 循环
+for... of 循环可以自动遍历Generator 生成的Iterator 对象，因此不再需要调用next 方法；
+```
+function *foo() {
+  yield 1;
+  yield 2;
+  yield 3;
+  yield 4;
+  yield 5;
+  return 6;
+}
+
+for (let v of foo()) {
+  console.log(v);
+}
+// 1 2 3 4 5
+
+```
+
+### Generator.prototype.return()
+函数返回的遍历器对象，还有一个return 方法，可以返回给定的值，并且终结遍历generator 函数
+```
+function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+var g = gen();
+
+g.next()        // { value: 1, done: false }
+g.return('foo') // { value: "foo", done: true }
+g.next()        // { value: undefined, done: true }
+
+```
+
+### Generator 应用
+. 异步操作同步化表达
+. 流程管理
+. 部署Iterator 接口
+. 做为数据结构
