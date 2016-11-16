@@ -24,3 +24,14 @@ if (true) {
 
 //全局变量；var function 声明的全局变量依然是全局变量的属性；
 //let class const 声明的对象不属于全局；
+
+//箭头函数；
+/*
+* 箭头函数 中大括号，相当于 结构赋值；
+*/
+var fun= ({name})=> {
+	console.log('箭头函数！！');
+	console.log(name);
+}
+
+fun({name:'passionn!'});
