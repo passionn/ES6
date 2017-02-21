@@ -35,3 +35,5 @@ var fun= ({name})=> {
 }
 
 fun({name:'passionn!'});
+
+//test
