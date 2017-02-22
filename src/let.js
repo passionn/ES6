@@ -37,16 +37,3 @@ var fun= ({name})=> {
 fun({name:'passionn!'});
 
 //test
-for(var i=0;i<5;i++){
-	setTimeout(function(){
-		console.log(i);
-	},0)
-}
-
-for(var i=0;i<5;i++){
-	(function(index){
-		setTimeout(function(){
-			console.log(i);
-		},0);
-	})(i);
-}
