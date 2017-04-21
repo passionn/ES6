@@ -1,3 +1,4 @@
+var name="passion";
 export default {
 	name:'hello',
 	data(){
