@@ -10,3 +10,8 @@ console.log('hello github!');
 
 console.log('this');
 console.log(this);
+
+import hello from './export1'
+
+console.log(hello.name);
+console.log(hello.data());
