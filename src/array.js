@@ -18,3 +18,5 @@ promise.then(function() {
 });
 
 console.log('Hi!');
+
+console.log('test');
