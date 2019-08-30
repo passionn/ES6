@@ -18,13 +18,5 @@ node server ./src/*.js
 
 md 目录下是对每个知识点的总结；
 
-tese1
-
-test2
-
-test3
-
-test4
-
 ## License
 @MIT
