@@ -12,10 +12,19 @@ if (true) {
   tmp = 'abc'; // ReferenceError
   console.log(tmp);
   let tmp;
+  console.log(tmp);
+}
+
+//
+var tem1=234;
+if(true){
+	let tem1=345;
+	console.log('能输入来吗？',tem1);
 }
 
 //* 不允许重复声明；
 {
+	var name="passion";
     let name=123;
     //let name=456; //报错
 }
