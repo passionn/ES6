@@ -44,6 +44,20 @@ m.has(o) // true
 m.delete(o) // true
 m.has(o) // false
 ```
+Map 也可以接受一个数组作为参数。该数组的成员是一个个表示键值对的数组
+``` javascript
+const map = new Map([
+  ['name', '张三'],
+  ['title', 'Author']
+]);
+
+map.size // 2
+map.has('name') // true
+map.get('name') // "张三"
+map.has('title') // true
+map.get('title') // "Author"
+
+```
 Map构造函数接受数组作为参数，实际上执行的是下面的算法。
 ``` javascript
 const map = new Map([
@@ -88,6 +102,15 @@ map.get(k2) // 222
 6. clear()
 
 #### 遍历方法
+
+#### 与其他数据结构的互相转换
+> map 转化为数组
+```javascript
+const myMap = new Map()
+  .set(true, 7)
+  .set({foo: 3}, ['abc']);
+[...myMap]
+```
 
 
 
