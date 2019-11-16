@@ -1,3 +1,18 @@
+//扩展运算符
+
+var a1=[1,2];
+console.log('扩展运算符', ...a1 );
+function add(arr){
+  for(var i=0;i<arguments.length;i++){
+    console.log(arguments[i]);
+  }
+}
+
+add(...a1);
+
+
+
+
 let arrayLike = {
     '0': 'a',
     '1': 'b',
