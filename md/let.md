@@ -28,7 +28,7 @@ console.log(a);//123
 function a(){
     console.log(a);
 }
-console.log(a); //输入函数题
+console.log(a); //输入函数体
 var a=123;
 console.log(a);//123
 ```
