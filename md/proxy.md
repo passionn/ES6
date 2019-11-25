@@ -2,6 +2,7 @@
 proxy 用于修改某些操作的默认行为；等于在语言层面作出修改，属于一种元编程，即对编程语言进行编程；
 
 proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问都必须先通过这层拦截；
+
 ``` javascript
 var obj= new Proxy({},{
     get:function(target,key,receiver){
@@ -62,5 +63,44 @@ proxy.name //passion
 proxy.age //跑出错误
 
 ```
+#### apply()
+apply 方法拦截函数的调用，或者call，apply的调用；
+apply 接受三个参数，目标对象，目标对象上下文（this），和目标对象的参数数组
+``` javascript
+    var target=function(){return 'I am target'}
+    var handler={
+        apply(target,cxt,arg){
+            return 'I am Proxy';
+        }
+    }
+    var p=new Proxy(target,handler);
+    p();
+```
+
+### construct()
+用于拦截new 命令
+construct 接受三个参数 
+1. target：目标对象
+2. args：构造函数的参数对象
+3. newTarget 创造实例对象时，new命令作用的构造函数（下面例子的p）
+```javascript
+var p=new Proxy(function(){},{
+    construct(target,args,newTarget){
+        console.log('called: ' + args.join(', ');
+        return { value: args[0] * 10 };
+    }
+});
+
+(new p(1)).value //10
+
+```
+> construct方法返回的必须是一个对象，否则会报错。
+
+#### has()
+has方法用来拦截HasProperty操作，即判断对象是否具有某个属性时，这个方法会生效。典型的操作就是in运算符。
+
+
+
+
 
 

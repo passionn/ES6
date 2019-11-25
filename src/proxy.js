@@ -23,5 +23,26 @@ var proxy=new Proxy({},{
 var obj=Object.create(proxy);
 obj.name; //3
 
+// apply construct
+var target=function(){return 'I am target'}
+var handler={
+    apply(target,cxt,arg){
+        return 'I am Proxy';
+    }
+}
+var p=new Proxy(target,handler);
+console.log(p());
+
+// construct
+var p1=new Proxy(function(){},{
+    construct(target,args,newTarget){
+        console.log('called: ' + args.join(', '));
+        return { value: args[0] * 10 };
+    }
+});
+
+(new p1(1)).value // 10
+console.log((new p1(1)).value); 
+
 
 
