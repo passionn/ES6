@@ -102,6 +102,20 @@ has方法用来拦截HasProperty操作，即判断对象是否具有某个属性
 has方法可以接受两个参数，分别是目标对象、需查询的属性名。
 
 
+### defineProperty()
+defineProperty 方法拦截了 Object.defineProperty操作
+``` javascript
+var handler = {
+  defineProperty (target, key, descriptor) {
+    return false;
+  }
+};
+var target = {};
+var proxy = new Proxy(target, handler);
+proxy.foo = 'bar' // 不会生效
+
+```
+
 
 
 
