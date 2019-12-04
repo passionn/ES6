@@ -60,3 +60,4 @@ var loggedObj = new Proxy(obj, {
 上面代码中，每一个Proxy对象的拦截操作（get、delete、has），内部都调用对应的Reflect方法，保证原生行为能够正常执行。添加的工作，就是将每一个操作输出一行日志。
 
 ## 2. 静态方法
+1. 
