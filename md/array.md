@@ -1,7 +1,7 @@
 ## 数组的扩展
 
 #### Arrary.from
-类似数组的对象，Array.from 能将他转化成真正的数组
+类似数组的对象,可遍历的对象（Set 和 Map），Array.from 能将他转化成真正的数组
 ``` javascript
 let arrayLike = {
     '0': 'a',
@@ -32,7 +32,7 @@ Array.of(3).length;//1s
 ```
 findIndex 方法的用法与find方法 类似，不同：所有成员不符合条件，则返回-1。  
 另外这两个方法都可以发现NaN，弥补了数组的IndexOf方法的不足。
-```
+```javascript
 [NaN].indexof(NaN); //-1
 [NaN].findIndex(y=>Object.is(NaN,y));//0
 ```
@@ -46,4 +46,18 @@ fill 方法可以接受第二个和第三个参数，用于指定填充的起始
 ``` javascript
 ['a','b','c'].fill(7,1,2); //['a',7,'c']
 ```
+### 数组实例的 includes() 
+Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的includes方法类似
+```javascript
+    [1, 2, 3].includes(2)     // true
+    [1, 2, 3].includes(4)     // false
+    [1, 2, NaN].includes(NaN) // true
+```
+indexOf方法有两个缺点，一是不够语义化，它的含义是找到参数值的第一个出现位置，所以要去比较是否不等于-1，表达起来不够直观。二是，它内部使用严格相等运算符（===）进行判断，这会导致对NaN的误判
 
+```javascript
+[NaN].indexOf(NaN)
+// -1
+[NaN].includes(NaN)
+// true
+```
