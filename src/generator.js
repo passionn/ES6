@@ -1,3 +1,10 @@
+/*
+ * @Author: Passion 
+ * @Date: 2019-12-13 09:42:23 
+ * @Last Modified by:   Passion 
+ * @Last Modified time: 2019-12-13 09:42:23 
+ */
+
 function *f(){
     console.log('generator 执行了！！');
 }
