@@ -6,7 +6,7 @@ Promise 简单的说是一个容器，里面保存着某个未来才会结束的
 . 对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态：Pending（进行中） Resolved（已完成）和 Rejected（已失败）。
 . 一旦装填改变，就不会再变，任何时候都可以得到这个结果。就算状态改变了，你在对Promise 添加回调函数，也立即会得到结果。这与事件完全不同；
 ### 基本用法
-```
+``` javascript
 var promise =new Promise(function(resolve,reject){
     // some code
     if(/* 成功*/){
@@ -17,7 +17,7 @@ var promise =new Promise(function(resolve,reject){
 })
 ```
 Promise 实例生成以后，可以用then 方法分别制定 Resolved 装填和 Reject的回调函数。
-```
+```javascript
 promise.then(function(value){
 
 },function(error){
@@ -26,7 +26,7 @@ promise.then(function(value){
 ```
 
 简单示例
- ```
+ ``` javascript
  function timeout(ms){
      return new Promise((resolve,reject)=>{
          setTimeout(resolve,ms,'done');
@@ -38,7 +38,7 @@ promise.then(function(value){
  })
  ```
 如果调用resolve函数和reject 函数时带有参数，那么他们的参数会被传递给回调函数，resolve函数的参数除了正常的值以外，还可能是另一个Promise实例，表示异步操作的结果有可能是一个值，也有可能是另一个一步操作；
-```
+```javascript
 var p1 = new Promise(function (resolve, reject) {
   // ...
 });
@@ -64,10 +64,22 @@ var p=Promise.all([p1,p2,p3]);
 
 ### Promise.resolve()
 有时候需要将现有对象转化成promise 对象就需要promise.resolve()
-.参数是一个promise对象；
-.参数是一个thenable 对象
-.参数不具有then方法的对象或者根本不是对象
+.参数是一个promise对象；原封不动的返回这个对象
+.参数是一个thenable 对象；
+.参数不具有then方法的对象或者根本不是对象；返回一个promise对象状态改为resolve
 .不带有任何参数
+
+Promise.resolve()等价于下面的写法。
+``` javascript
+Promise.resolve('foo');
+// 等价于
+new Promise(resolve=>{resolve('foo')});
+```
+
+## Promise 实现原理
+1、promise
+
+
 
 
 

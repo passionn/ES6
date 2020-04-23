@@ -33,5 +33,10 @@ target // {a:1, b:2, c:3}
 hasOwnProperty 判断一个对象是否含有特定的自身属性；
 in 操作回判断原型链上时候包含特定的属性；
 
+### Object.entries(obj)
 
-
+返回对象自身可枚举属性的键值对数组
+```javascript
+	var obj={foo"bar",baz:42}
+	console.log(Object.entries(obj)); // [['foo','bar'],['baz','42']]
+```
