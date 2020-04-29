@@ -40,3 +40,4 @@ in 操作会判断原型链上是否包含特定的属性；
 	var obj={foo"bar",baz:42}
 	console.log(Object.entries(obj)); // [['foo','bar'],['baz','42']]
 ```
+> 使用最多点，统计对象，对value值进行排序；
