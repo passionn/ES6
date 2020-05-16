@@ -66,7 +66,9 @@ proxy.age //跑出错误
 #### apply()
 apply 方法拦截函数的调用，或者call，apply的调用；
 apply 接受三个参数，目标对象，目标对象上下文（this），和目标对象的参数数组
-``` javascript
+
+```javascript
+
     var target=function(){return 'I am target'}
     var handler={
         apply(target,cxt,arg){
@@ -75,6 +77,7 @@ apply 接受三个参数，目标对象，目标对象上下文（this），和�
     }
     var p=new Proxy(target,handler);
     p();
+    
 ```
 
 ### construct()

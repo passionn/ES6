@@ -41,3 +41,8 @@ in 操作会判断原型链上是否包含特定的属性；
 	console.log(Object.entries(obj)); // [['foo','bar'],['baz','42']]
 ```
 > 使用最多点，统计对象，对value值进行排序；
+
+### Object.create()
+创建一个新对象   
+使用**现有对象** 提供新创建对象的 __proto__ 
+
