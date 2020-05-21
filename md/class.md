@@ -38,7 +38,8 @@ typeof Point // 'function'
 Point === Point.prototype.constructor //true
 
 ```
-上面代码表明 类的数据类型就是函数，类本身就指向构造函数。
+> 上面代码表明 类的数据类型就是函数，类本身就指向构造函数。
+
 
 
 
