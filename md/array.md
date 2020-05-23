@@ -61,3 +61,14 @@ indexOf方法有两个缺点，一是不够语义化，它的含义是找到参�
 [NaN].includes(NaN)
 // true
 ```
+### 数组的find() 和findIndex()
+数组实例的find方法，用于找出数组中第一个符合条件的成员；  
+参数是一个函数  
+返回值是 找到的值 找不到就返回 undefined
+```javascript
+    [1,2,5,-10,8].find(e=>{return e<0}); // 返回-10
+```
+> 注意和 includes()的区别 前者是返回 布尔值 后者是返回找到的数组成员；
+
+
+
