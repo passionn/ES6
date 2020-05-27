@@ -39,6 +39,12 @@ Point === Point.prototype.constructor //true
 
 ```
 > 上面代码表明 类的数据类型就是函数，类本身就指向构造函数。
+类的方法都是定义在 prototype 上面的
+
+__proto__ 并不是语言本身的特性，这是各大浏览器厂商添加的私有属性；有可能存在兼容性   
+可以使用 Object.getPrototypeOf() 方法获取实例对象的原型   
+
+
 
 
 
