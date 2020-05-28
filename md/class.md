@@ -44,6 +44,27 @@ Point === Point.prototype.constructor //true
 __proto__ 并不是语言本身的特性，这是各大浏览器厂商添加的私有属性；有可能存在兼容性   
 可以使用 Object.getPrototypeOf() 方法获取实例对象的原型   
 
+##### 静态方法
+在方法前加上 static关键字 静态方法不会被实例继承 而是直接通过类赖调用
+```javascript
+class Point {
+    static classmethod(){
+        console.log('hello class!');
+    }
+}
+
+Point.classmethod(); // hello class
+var p=new Point();
+p.classmethod();// 报错
+
+```
+静态方法可以和非静态方法重名   
+父类的静态方法可以被子类继承  
+
+##### 私有方法和私有属性
+
+
+
 
 
 
