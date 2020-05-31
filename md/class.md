@@ -61,7 +61,46 @@ p.classmethod();// 报错
 静态方法可以和非静态方法重名   
 父类的静态方法可以被子类继承  
 
-##### 私有方法和私有属性
+###### 类的继承
+通过extends 实现继承
+```javascript
+class Point{
+    constructor(x,y){
+        this.x=x;
+        this.y=y;
+    }
+
+    toString(){
+        return this.x+this.y
+    }
+}
+
+class Mpoint extends Point{
+    constructor(x,y,color){
+        super(x,y);
+        this.color=color;
+    }
+
+    toString(){
+        //return this.x+this.y+this.color;
+        //
+        return this.color + super.toString();
+    }
+
+}
+```
+继承 必须在构造函数中调用 super 方法；
+
+##### Object.getPrototypeOf()
+可以从子类上获取父类   
+```javascript
+Object.getPrototypeOf(ColorPoint) === Point
+```
+可以用来判断一个类是否继承了另一个类 
+
+
+
+
 
 
 
