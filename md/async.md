@@ -45,6 +45,22 @@ async 函数有多种使用形式
 Promise 状态的变化： 必须等到内部所有 await 命令后面的promise对象执行完 才会改变状态；  
 
 ##### await 命令
+await 命令就是 then的语法糖   
+```javascript
+    async function async1(){
+        console.log('1');
+        await async2();
+        console.log('2');
+    }
+    // 等价于；
+    async function async1(){
+        console.log('1);
+        Promise().resolve(async2()).then(()=>{
+            console.log(2);
+        })
+    }
+    
+```
 await 命令后面是一个 Promise 对象，返回该对象的结果；如果不是Promise 就直接返回对应的值；  
 
 
