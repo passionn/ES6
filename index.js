@@ -1,6 +1,10 @@
 import 'babel-polyfill';
 
+<<<<<<< HEAD
 console.log('hello! ES6!!!');
+=======
+console.log('hello! ES6!');
+>>>>>>> feat:rebase
 console.log([
 "                                _oo8oo_",
 "                               o8888888o",
